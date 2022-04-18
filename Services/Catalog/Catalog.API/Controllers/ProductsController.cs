@@ -1,12 +1,13 @@
-﻿using Catalog.Application.Products;
+﻿using Catalog.Application.Products.CreateProduct;
 using Catalog.Application.Products.GetProduct;
 using Catalog.Application.Products.GetProducts;
-using Catalog.Domain;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Catalog.API.Controllers;
 
+[ApiController]
+[Route("api/[controller]")]
 public class ProductsController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -17,20 +18,20 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet]
-    public Task<GetProductsQueryResponse> GetProducts()
+    public Task<GetProductsQueryResponse> GetProducts(CancellationToken cancellationToken)
     {
-        return _mediator.Send(new GetProductsQuery());
+        return _mediator.Send(new GetProductsQuery(), cancellationToken);
     }
 
     [HttpGet("{id:guid}")]
-    public Task<GetProductQueryResponse> GetProduct(Guid id)
+    public Task<GetProductQueryResponse> GetProduct(Guid id, CancellationToken cancellationToken)
     {
-        return _mediator.Send(new GetProductQuery(id));
-    }  
+        return _mediator.Send(new GetProductQuery(id), cancellationToken);
+    }
 
     [HttpPost]
-    public CreateProductQueryResponse CreateProduct(Product product)
+    public Task CreateProduct(CreateProductCommand product, CancellationToken cancellationToken)
     {
-        productRepository.CreateProduct(product);
+        return _mediator.Send(product, cancellationToken);
     }
 }

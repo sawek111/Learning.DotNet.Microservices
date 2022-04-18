@@ -1,5 +1,4 @@
-﻿using System.Runtime.InteropServices.ComTypes;
-using Catalog.Application.Abstraction.Repositories;
+﻿using Catalog.Application.Abstraction.Repositories;
 using MediatR;
 
 namespace Catalog.Application.Products.CreateProduct;
@@ -16,5 +15,6 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
     public async Task<Unit> Handle(CreateProductCommand request, CancellationToken cancellationToken)
     {
         await _productsRepository.AddAsync(request);
+        return Unit.Value;
     }
 }
