@@ -1,11 +1,12 @@
-﻿namespace Catalog.Domain;
+﻿using Catalog.Domain.Primitives;
 
-public class Product
+namespace Catalog.Domain;
+
+public sealed class Product : Entity
 {
     public Product(Guid id, string name, string category, string summary, string description, string imageFile,
-        decimal price)
+        decimal price) : base(id)
     {
-        Id = id;
         Name = name;
         Category = category;
         Summary = summary;
@@ -14,7 +15,6 @@ public class Product
         Price = price;
     }
 
-    public Guid Id { get; private set; }
     public string Name { get; private set; }
     public string Category { get; private set; }
     public string Summary { get; private set; }
