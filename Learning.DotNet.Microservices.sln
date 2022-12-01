@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Benchmarks", "Benchmarks", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duplication.Recognition.Benchmark", "Benchmarks\Duplication.Recognition.Benchmark\Duplication.Recognition.Benchmark.csproj", "{E91C7A6B-7A6B-4AC1-8719-EA03657DA8E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Presentation", "Services\Catalog\Catalog.Presentation\Catalog.Presentation.csproj", "{ABA6CA77-3E6B-47E3-9140-3DA3F222BAF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,7 @@ Global
 		{97235F6E-BBE9-4384-97CE-A68586D15928} = {F804252A-1855-4BB3-A75A-DE795D48E81F}
 		{0641987E-0FC7-4B48-83A7-CA69346F2FA1} = {F804252A-1855-4BB3-A75A-DE795D48E81F}
 		{E91C7A6B-7A6B-4AC1-8719-EA03657DA8E5} = {94FA59F7-53E6-4085-A7A3-72B467C66BC5}
+		{ABA6CA77-3E6B-47E3-9140-3DA3F222BAF9} = {F804252A-1855-4BB3-A75A-DE795D48E81F}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{899EA227-CCA0-454F-B6A8-6779D8DEF4EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -60,5 +63,9 @@ Global
 		{E91C7A6B-7A6B-4AC1-8719-EA03657DA8E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E91C7A6B-7A6B-4AC1-8719-EA03657DA8E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E91C7A6B-7A6B-4AC1-8719-EA03657DA8E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA6CA77-3E6B-47E3-9140-3DA3F222BAF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA6CA77-3E6B-47E3-9140-3DA3F222BAF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA6CA77-3E6B-47E3-9140-3DA3F222BAF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA6CA77-3E6B-47E3-9140-3DA3F222BAF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
