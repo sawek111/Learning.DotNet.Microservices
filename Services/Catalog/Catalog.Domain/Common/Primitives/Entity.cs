@@ -1,4 +1,4 @@
-﻿namespace Catalog.Domain.Primitives;
+﻿namespace Catalog.Domain.Common.Primitives;
 
 public abstract class Entity
 {

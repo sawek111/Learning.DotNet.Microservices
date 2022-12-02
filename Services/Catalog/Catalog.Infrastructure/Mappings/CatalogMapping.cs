@@ -1,5 +1,6 @@
 ﻿using Catalog.Application.Abstraction;
 using Catalog.Domain;
+using Catalog.Domain.Product;
 using MongoDB.Bson.Serialization;
 
 namespace Catalog.Infrastructure.Mappings;

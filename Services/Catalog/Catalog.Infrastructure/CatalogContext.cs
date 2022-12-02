@@ -1,4 +1,5 @@
 ﻿using Catalog.Domain;
+using Catalog.Domain.Product;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 

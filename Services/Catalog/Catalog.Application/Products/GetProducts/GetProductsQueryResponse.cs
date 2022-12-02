@@ -1,4 +1,5 @@
 ﻿using Catalog.Domain;
+using Catalog.Domain.Product;
 
 namespace Catalog.Application.Products.GetProducts;
 

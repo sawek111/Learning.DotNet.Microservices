@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Catalog.Application.Abstraction.Repositories;
 using Catalog.Domain;
+using Catalog.Domain.Product;
 using MongoDB.Driver;
 
 namespace Catalog.Infrastructure.Repositories;

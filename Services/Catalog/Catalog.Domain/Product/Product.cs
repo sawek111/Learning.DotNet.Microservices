@@ -1,6 +1,6 @@
-﻿using Catalog.Domain.Primitives;
+﻿using Catalog.Domain.Common.Primitives;
 
-namespace Catalog.Domain;
+namespace Catalog.Domain.Product;
 
 public sealed class Product : Entity
 {
