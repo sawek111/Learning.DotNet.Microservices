@@ -1,4 +1,5 @@
-﻿using BenchmarkDotNet.Columns;
+﻿using System.Diagnostics;
+using BenchmarkDotNet.Columns;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Loggers;
 using BenchmarkDotNet.Running;
@@ -13,4 +14,4 @@ var config = new ManualConfig()
     .AddLogger(ConsoleLogger.Default)
     .AddColumnProvider(DefaultColumnProviders.Instance);
 
-var summary = BenchmarkRunner.Run<RecognitionBenchmark>(config);
+var summary = BenchmarkRunner.Run<Dupa123>(config);
