@@ -7,17 +7,23 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="10.4.0" />
       <PackageReference Include="MediatR" Version="12.1.0" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Order\Commands" />
-      <Folder Include="Order\Query" />
+      <Folder Include="Orders\Query" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Ordering.Contracts\Ordering.Contracts.csproj" />
       <ProjectReference Include="..\Ordering.Domain\Ordering.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+        <HintPath>C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.7\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>
