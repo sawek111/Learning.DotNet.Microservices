@@ -1,6 +1,13 @@
+using Ordering.Application;
+using Ordering.Infrastructure;
+using Ordering.Infrastructure.Peristence;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSwaggerGen();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddMapster(typeof(OrderRepository).Assembly);
+
+builder.Services.AddApplication();
 
 var app = builder.Build();
 
