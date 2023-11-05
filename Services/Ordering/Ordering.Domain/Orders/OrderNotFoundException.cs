@@ -1,4 +1,5 @@
-using Ordering.Domain.Primitives;
+
+using Core.Primitives;
 
 namespace Ordering.Domain.Orders;
 

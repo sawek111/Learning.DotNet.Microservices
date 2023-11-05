@@ -1,5 +1,5 @@
 using System.Linq.Expressions;
-using Ordering.Domain.Primitives;
+using Core.Primitives;
 
 namespace Ordering.Domain.Abstraction;
 

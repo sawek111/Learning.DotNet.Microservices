@@ -1,6 +1,6 @@
+using Core.Primitives;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using Ordering.Domain.Primitives;
 
 namespace Ordering.Application.Behavior;
 

@@ -1,4 +1,4 @@
-namespace Ordering.Domain.Primitives;
+namespace Core.Primitives;
 
 public abstract class ValueObject
 {

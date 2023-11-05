@@ -1,4 +1,4 @@
-namespace Ordering.Domain.Primitives;
+namespace Core.Primitives;
 
 public class DomainException : Exception
 {

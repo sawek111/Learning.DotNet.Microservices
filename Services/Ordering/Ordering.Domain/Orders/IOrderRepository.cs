@@ -1,5 +1,5 @@
+using Core.Primitives;
 using Ordering.Domain.Abstraction;
-using Ordering.Domain.Primitives;
 
 namespace Ordering.Domain.Orders;
 
