@@ -1,6 +1,5 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
-using Ordering.Domain.Email;
 using Ordering.Domain.Orders;
 
 namespace Ordering.Application.Orders.Commands.UpdateOrder;
