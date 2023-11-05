@@ -1,6 +1,6 @@
 using MediatR;
 using Ordering.Contracts;
 
-namespace Ordering.Application.Order.Query.GetOrders;
+namespace Ordering.Application.Orders.Query.GetOrders;
 
 public sealed record GetOrdersQuery(string Name) : IRequest<IReadOnlyList<OrderResponse>>;

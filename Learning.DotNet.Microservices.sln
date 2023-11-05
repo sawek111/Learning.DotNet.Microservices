@@ -36,9 +36,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Contracts", "Servi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{19EDE356-07A5-457A-9633-B9728E473A0A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{099E7683-B5E1-474D-9CC0-C5B1ACF921EF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{099E7683-B5E1-474D-9CC0-C5B1ACF921EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.DotNet.ArchitectureTests", "Learning.DotNet.ArchitectureTests\Learning.DotNet.ArchitectureTests.csproj", "{F3F0FBFB-7E75-48A3-9137-1DA73A365798}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.ArchitectureTests", "Ordering.ArchitectureTests\Ordering.ArchitectureTests.csproj", "{F3F0FBFB-7E75-48A3-9137-1DA73A365798}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{DE536D59-E23F-4A50-AA49-36DF6A40FB24}"
 EndProject

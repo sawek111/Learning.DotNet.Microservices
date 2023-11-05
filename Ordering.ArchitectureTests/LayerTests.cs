@@ -1,3 +1,4 @@
+using System.Reflection;
 using FluentAssertions;
 using NetArchTest.Rules;
 
@@ -28,6 +29,23 @@ public class LayerTests
             .NotHaveDependencyOnAny(
                 Constants.Infrastructure,
                 Constants.Presentation,
+                Constants.WebApi)
+            .GetResult();
+
+        result.IsSuccessful.Should().BeTrue();
+    }
+    
+    [Fact]
+    public void NoneLayer_Should_HaveDependencyOnWebApiLayer()
+    {
+        var assemblies = Constants.AssembliesList.GetApplicationAssemblies()
+            .Concat(Constants.AssembliesList.GetDomainAssemblies())
+            .Concat(Constants.AssembliesList.GetInfrastructureAssemblies());
+        
+            
+        var result = Types.InAssemblies(assemblies)
+            .Should()
+            .NotHaveDependencyOn(
                 Constants.WebApi)
             .GetResult();
 

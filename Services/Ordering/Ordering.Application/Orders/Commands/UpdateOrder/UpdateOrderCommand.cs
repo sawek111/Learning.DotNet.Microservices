@@ -1,4 +1,5 @@
-using MediatR;
+
+using Core.Application;
 
 namespace Ordering.Application.Orders.Commands.UpdateOrder;
 

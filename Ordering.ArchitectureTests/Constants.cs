@@ -23,6 +23,11 @@ public static class Constants
         {
             yield return typeof(Order).Assembly;
         }
+        
+        public static IEnumerable<Assembly> GetInfrastructureAssemblies()
+        {
+            yield return typeof(DeleteOrderCommandHandler).Assembly;
+        }
 
         public static IEnumerable<Assembly> GetApplicationAssemblies()
         {

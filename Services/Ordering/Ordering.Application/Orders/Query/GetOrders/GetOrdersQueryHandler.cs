@@ -2,7 +2,7 @@ using MediatR;
 using Ordering.Contracts;
 using Ordering.Domain.Orders;
 
-namespace Ordering.Application.Order.Query.GetOrders;
+namespace Ordering.Application.Orders.Query.GetOrders;
 
 public sealed class GetOrdersQueryHandler : IRequestHandler<GetOrdersQuery, IReadOnlyList<OrderResponse>>
 {

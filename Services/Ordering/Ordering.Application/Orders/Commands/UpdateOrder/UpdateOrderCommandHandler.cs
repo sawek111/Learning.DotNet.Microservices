@@ -1,10 +1,10 @@
-using MediatR;
+using Core.Application;
 using Microsoft.Extensions.Logging;
 using Ordering.Domain.Orders;
 
 namespace Ordering.Application.Orders.Commands.UpdateOrder;
 
-public sealed class UpdateOrderCommandHandler : IRequestHandler<UpdateOrderCommand, bool>
+public sealed class UpdateOrderCommandHandler : ICommandHandler<UpdateOrderCommand, bool>
 {
     private readonly IOrderRepository _orderRepository;
     private readonly ILogger<UpdateOrderCommandHandler> _logger;

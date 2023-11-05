@@ -1,10 +1,11 @@
+using Core.Application;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Ordering.Domain.Orders;
 
 namespace Ordering.Application.Orders.Commands.DeleteOrder;
 
-public sealed class DeleteOrderCommandHandler : IRequestHandler<DeleteOrderCommand, bool>
+public sealed class DeleteOrderCommandHandler : ICommandHandler<DeleteOrderCommand, bool>
 {
     private readonly IOrderRepository _orderRepository;
     private readonly ILogger<DeleteOrderCommandHandler> _logger;
