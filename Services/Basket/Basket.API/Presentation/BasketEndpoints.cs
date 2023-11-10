@@ -1,6 +1,7 @@
 using AutoMapper;
-using Basket.API.Application;
-using Basket.API.Domain.Basket;
+using Basket.Contracts;
+using Basket.Core.Domain.Basket;
+using Basket.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Basket.API.Presentation;

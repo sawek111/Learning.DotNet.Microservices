@@ -1,4 +1,4 @@
-namespace Basket.API.Domain.Basket;
+namespace Basket.Core.Domain.Basket;
 
 public class ShoppingCart
 {

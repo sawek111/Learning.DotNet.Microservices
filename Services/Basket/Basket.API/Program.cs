@@ -1,7 +1,6 @@
-using Basket.API;
-using Basket.API.Application;
-using Basket.API.Infrastructure;
 using Basket.API.Presentation;
+using Basket.Infrastructure;
+using Core.Messages;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 
@@ -22,6 +21,8 @@ builder.Services.AddOptions<RedisSettings>()
     .BindConfiguration(RedisSettings.SectionName)
     .ValidateDataAnnotations()
     .ValidateOnStart();
+
+builder.Services.AddMessagingInfrastructure(builder.Configuration);
 builder.Services.AddSingleton(sp => sp.GetRequiredService<IOptions<RedisSettings>>().Value);
 builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 

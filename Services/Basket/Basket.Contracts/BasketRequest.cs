@@ -1,6 +1,6 @@
-using Basket.API.Domain.Basket;
+using Basket.Core.Domain.Basket;
 
-namespace Basket.API.Presentation;
+namespace Basket.Contracts;
 
 public sealed record BasketRequest( decimal TotalPrice, IList<ShoppingCartItem> Items)
 {

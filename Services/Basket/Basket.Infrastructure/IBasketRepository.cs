@@ -1,7 +1,7 @@
-using Basket.API.Domain.Basket;
-using Basket.API.Presentation;
+using Basket.Contracts;
+using Basket.Core.Domain.Basket;
 
-namespace Basket.API.Application;
+namespace Basket.Infrastructure;
 
 public interface IBasketRepository
 {

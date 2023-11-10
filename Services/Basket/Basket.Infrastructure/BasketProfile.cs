@@ -1,8 +1,8 @@
 using AutoMapper;
-using Basket.API.Domain.Basket;
-using Basket.API.Presentation;
+using Basket.Contracts;
+using Basket.Core.Domain.Basket;
 
-namespace Basket.API.Infrastructure;
+namespace Basket.Infrastructure;
 
 public sealed class BasketProfile : Profile
 {

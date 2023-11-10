@@ -1,11 +1,10 @@
 using AutoMapper;
-using Basket.API.Application;
-using Basket.API.Domain.Basket;
-using Basket.API.Presentation;
+using Basket.Contracts;
+using Basket.Core.Domain.Basket;
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
 
-namespace Basket.API.Infrastructure;
+namespace Basket.Infrastructure;
 
 // TODO result pattern
 public class BasketRepository : IBasketRepository
