@@ -1,2 +1,21 @@
-orderdb: 
-  image: docker pull mcr.microsoft.com/mssql/server:2022-latest
+version: '3.8'
+
+services:
+  orderdb:
+    container_name: orderdb
+  basketdb:
+    container_name: basketdb
+  
+  ordering.webapi:
+    container_name: ordering.webapi
+    build:
+      context: .
+      dockerfile: Ordering/Ordering.WebApi/Dockerfile
+    
+  basket.api:
+    container_name: basket.api
+    build:
+      context: .
+      dockerfile: Basket/Basket.API/Dockerfile
+
+  

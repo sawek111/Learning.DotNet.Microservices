@@ -2,7 +2,6 @@ version: '3.8'
 
 services:
   orderdb:
-    container_name: orderdb
     image: mcr.microsoft.com/mssql/server:2019-latest
     environment:
       ACCEPT_EULA: "Y"
@@ -10,3 +9,29 @@ services:
     restart: always
     ports:
       - "1433:1433"
+  
+  basketdb:
+    image: redis:alpine
+    restart: always
+    ports:
+      - "6379:6379"
+  
+  ordering.webapi:
+    image: ${DOCKER_REGISTRY-}orderingwebapi
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+        - "ConnectionStrings:OrderingConnectionString=Server=orderdb;Database=OrderingDb;User Id=sa;Password=YourStrong(!)Password"
+    depends_on: 
+        - orderdb
+    ports:
+        - "8004:80"
+    
+  basket.api:
+    image: ${DOCKER_REGISTRY-}basketapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "RedisSettings:ConnectionString=basketdb:6379"
+    depends_on:
+      - basketdb
+    ports:
+      - "8001:80"

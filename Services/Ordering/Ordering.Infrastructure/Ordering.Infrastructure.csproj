@@ -8,12 +8,11 @@
 
     <ItemGroup>
       <PackageReference Include="Mapster" Version="7.3.0" />
-      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Ordering.Contracts\Ordering.Contracts.csproj" />
       <ProjectReference Include="..\Ordering.Domain\Ordering.Domain.csproj" />
     </ItemGroup>
-
 </Project>
