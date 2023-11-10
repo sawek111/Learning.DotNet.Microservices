@@ -1,5 +1,6 @@
 using AutoMapper;
 using Basket.API.Domain.Basket;
+using Basket.API.Presentation;
 
 namespace Basket.API.Infrastructure;
 

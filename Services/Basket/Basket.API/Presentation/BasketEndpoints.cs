@@ -3,7 +3,7 @@ using Basket.API.Application;
 using Basket.API.Domain.Basket;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Basket.API;
+namespace Basket.API.Presentation;
 
 public static class BasketEndpoints
 {

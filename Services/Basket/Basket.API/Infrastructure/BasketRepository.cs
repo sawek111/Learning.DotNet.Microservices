@@ -1,6 +1,7 @@
 using AutoMapper;
 using Basket.API.Application;
 using Basket.API.Domain.Basket;
+using Basket.API.Presentation;
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
 
