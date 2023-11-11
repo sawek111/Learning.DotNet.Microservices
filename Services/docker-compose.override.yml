@@ -25,6 +25,9 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - "ConnectionStrings:OrderingConnectionString=Server=orderdb;Database=OrderingDb;User Id=sa;Password=YourStrong(!)Password"
+      - "EventBusSettings:Host=rabbitmq:5672"
+      - "EventBusSettings:UserName=guest"
+      - "EventBusSettings:Password=guest"
     depends_on:
       - orderdb
     ports:
@@ -35,9 +38,9 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - "RedisSettings:ConnectionString=basketdb:6379"
-      - "RabbitSettings:ConnectionString=localhost:5672"
-      - "RabbitSettings:Host=guest"
-      - "RabbitSettings:Password=guest"
+      - "EventBusSettings:Host=rabbitmq:5672"
+      - "EventBusSettings:UserName=guest"
+      - "EventBusSettings:Password=guest"
     depends_on:
       - basketdb
     ports:

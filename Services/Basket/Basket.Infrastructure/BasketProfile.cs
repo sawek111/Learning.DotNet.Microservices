@@ -9,6 +9,7 @@ public sealed class BasketProfile : Profile
     public BasketProfile()
     {
         CreateMap<ShoppingCart, BasketResponse>();
+        CreateMap<BasketResponse, BasketCheckedOutEvent>();
         CreateMap<BasketRequest, ShoppingCart>();
         CreateMap<(string name, BasketRequest request), ShoppingCart>()
             .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.name));

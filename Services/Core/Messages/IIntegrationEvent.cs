@@ -2,6 +2,6 @@ namespace Core.Messages;
 
 public interface IIntegrationEvent
 {
-    public static Guid Id { get; }
-    public static DateTime CreatedAtUtc { get; }
+    public Guid EventId { get; }
+    public DateTime CreatedAtUtc { get; }
 }

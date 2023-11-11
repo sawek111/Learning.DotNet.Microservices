@@ -18,25 +18,25 @@ public class BasketRepository : IBasketRepository
         _mapper = mapper;
     }
     
-    public async Task<BasketResponse> GetBasket(string userName)
+    public async Task<BasketResponse> GetBasketAsync(string userName)
     {
         var basket = await _cache.GetStringAsync(userName);
         if (basket is null)
         {
             return null;
         }
-        
-        return _mapper.Map<BasketResponse>(JsonConvert.DeserializeObject<ShoppingCart>(basket));
+
+        return JsonConvert.DeserializeObject<BasketResponse>(basket);
     }
     
-    public async Task<BasketResponse> UpdateBasket(ShoppingCart basket)
+    public async Task<BasketResponse> UpdateBasketAsync(ShoppingCart basket)
     {
         var basketJson = JsonConvert.SerializeObject(basket);
         await _cache.SetStringAsync(basket.UserName, basketJson);
         return _mapper.Map<BasketResponse>(basket);
     }
     
-    public async Task<bool> DeleteBasket(string userName)
+    public async Task<bool> DeleteBasketAsync(string userName)
     {
         try
         {

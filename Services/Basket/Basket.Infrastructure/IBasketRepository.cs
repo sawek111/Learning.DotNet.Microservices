@@ -5,7 +5,7 @@ namespace Basket.Infrastructure;
 
 public interface IBasketRepository
 {
-    Task<BasketResponse> GetBasket(string userName);
-    Task<BasketResponse> UpdateBasket(ShoppingCart basket);
-    Task<bool> DeleteBasket(string userName);
+    Task<BasketResponse> GetBasketAsync(string userName);
+    Task<BasketResponse> UpdateBasketAsync(ShoppingCart basket);
+    Task<bool> DeleteBasketAsync(string userName);
 }

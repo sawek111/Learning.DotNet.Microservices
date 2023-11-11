@@ -48,6 +48,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapGet("settings/redis", (RedisSettings settings) => Results.Ok(settings));
+app.MapGet("settings/rabbit", (EventBusSettings settings) => Results.Ok(settings));
 
 app.AddBasketEndpoints();
 
