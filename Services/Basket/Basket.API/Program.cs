@@ -1,5 +1,6 @@
 using Basket.API.Presentation;
 using Basket.Infrastructure;
+using Basket.Infrastructure.Redis;
 using Core.Messages;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;

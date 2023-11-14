@@ -4,6 +4,7 @@ using Ordering.Domain;
 using Ordering.Domain.Email;
 using Ordering.Domain.Orders;
 using Ordering.Infrastructure;
+using Ordering.Infrastructure.Mapping;
 using Ordering.Infrastructure.Peristence;
 using Ordering.WebApi.Consumers;
 
@@ -21,14 +22,9 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddMessagingInfrastructure(builder.Configuration, typeof(BasketCheckedOutEventConsumer).Assembly);
 builder.Services.AddControllers();
 
-
-// TODO - Add automapper when OrderRepository done
-// builder.Services.AddMapster(typeof(OrderRepository).Assembly);
-
+builder.Services.AddAutoMapper(typeof(OrderProfile));
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

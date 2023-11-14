@@ -10,7 +10,7 @@ COPY ["Ordering/Ordering.Application/Ordering.Application.csproj", "Ordering/Ord
 COPY ["Ordering/Ordering.Domain/Ordering.Domain.csproj", "Ordering/Ordering.Domain/"]
 COPY ["Ordering/Ordering.Presentation/Ordering.Presentation.csproj", "Ordering/Ordering.Presentation/"]
 COPY ["Ordering/Ordering.Infrastructure/Ordering.Infrastructure.csproj", "Ordering/Ordering.Infrastructure/"]
-
+COPY ["Core/Core.csproj", "Core/Core/"]
 RUN dotnet restore "Ordering/Ordering.WebApi/Ordering.WebApi.csproj"
 COPY . .
 WORKDIR "/src/Ordering/Ordering.WebApi"

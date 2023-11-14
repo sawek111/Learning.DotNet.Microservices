@@ -4,7 +4,7 @@ using Basket.Core.Domain.Basket;
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
 
-namespace Basket.Infrastructure;
+namespace Basket.Infrastructure.Redis;
 
 // TODO result pattern
 public class BasketRepository : IBasketRepository

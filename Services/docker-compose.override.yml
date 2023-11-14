@@ -30,6 +30,7 @@ services:
       - "EventBusSettings:Password=guest"
     depends_on:
       - orderdb
+      - rabbitmq
     ports:
       - "8004:80"
   
@@ -43,5 +44,6 @@ services:
       - "EventBusSettings:Password=guest"
     depends_on:
       - basketdb
+      - rabbitmq
     ports:
       - "8001:80"

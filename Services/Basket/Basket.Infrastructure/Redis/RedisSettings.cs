@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Basket.Infrastructure;
+namespace Basket.Infrastructure.Redis;
 
 public sealed class RedisSettings
 {
