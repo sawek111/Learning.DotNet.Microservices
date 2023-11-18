@@ -23,5 +23,12 @@ services:
     build:
       context: .
       dockerfile: Basket/Basket.API/Dockerfile
+      
+  shopping.aggregator:
+    container_name: shopping.aggregator
+    build:
+      context: .
+      dockerfile: ApiGateways/Shopping/Dockerfile
+      
 
   

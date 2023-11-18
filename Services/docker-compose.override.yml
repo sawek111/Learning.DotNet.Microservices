@@ -47,3 +47,16 @@ services:
       - rabbitmq
     ports:
       - "8001:80"
+    
+  shopping.aggregator:
+     image: ${DOCKER_REGISTRY-}shopping.aggregator
+     environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+        - "EventBusSettings:Host=rabbitmq:5672"
+        - "EventBusSettings:UserName=guest"
+        - "EventBusSettings:Password=guest"
+     depends_on:
+       - rabbitmq
+     ports:
+        - "8009:80"
+
