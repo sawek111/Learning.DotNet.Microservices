@@ -1,5 +1,6 @@
 using Catalog.Application.Products.CreateProduct;
 using Catalog.Infrastructure;
+using Catalog.Presentation;
 using FluentValidation;
 using MediatR;
 
@@ -7,8 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddControllers()
+    .AddApplicationPart(typeof(ProductsController).Assembly);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMediatR(typeof(CreateProductCommandHandler));
@@ -21,7 +22,6 @@ builder.Services.AddCatalogInfrastructureServices();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

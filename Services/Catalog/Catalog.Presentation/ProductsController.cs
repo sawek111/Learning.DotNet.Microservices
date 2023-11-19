@@ -4,7 +4,7 @@ using Catalog.Application.Products.GetProducts;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Catalog.Presentation.Controllers;
+namespace Catalog.Presentation;
 
 [ApiController]
 [Route("api/[controller]")]
