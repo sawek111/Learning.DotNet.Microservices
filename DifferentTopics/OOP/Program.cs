@@ -3,7 +3,7 @@
 using OOP;
 
 var actions = new A[] { new B(), new C() };
-
+Console.WriteLine("--------------------");
 foreach (A action in actions)
 {
     Console.WriteLine(action.GetType());
@@ -11,15 +11,6 @@ foreach (A action in actions)
     action.MakeAbstractAction();
     action.MakeVirtualAction();
 }
-//
-// OOP.B
-//     Normal Action AAAAAAAA
-// BBBBBBBB
-//     Virtual action AAAAAAAA
-// Virtual action BBBBBBBB
-// OOP.C
-//     Normal Action AAAAAAAA
-// CCCCC
-//     Virtual action AAAAAAAA
-// Virtual action BBBBBBBB
-//     Virtual action CCCCCCC
+Console.WriteLine("--------------------");
+
+var actionD = new D();
